@@ -1,0 +1,26 @@
+# Keshav Markan
+
+> Portfolio of Keshav Kumar Markan, a Bachelor of Computer Science student at Conestoga College working in software engineering, applied AI research, and accessible learning resources.
+
+The normal portfolio contains readable experience and project information. An optional interactive 3D campus presents the same work. Camera hand scrolling is optional; essential content is available without camera access or solving puzzles.
+
+## Portfolio
+
+- [Work experience](https://keshavmarkan.com/#folio-experience-section): Research Assistant, Deepiri Software Engineer Intern, PAL Student Leader, OER Assistant, and CSI Student Life Representative. PAL facilitates collaborative learning. OER work develops accessible, zero-cost learning resources.
+- [Selected projects](https://keshavmarkan.com/#folio-selected): Software Effort Estimator, ChainBreak Lab, and Naftelia.
+- [100 Days, 100 Projects](https://keshavmarkan.com/#folio-series): Day 1 is Smart Traffic Navigator using Dijkstra's algorithm. Day 2 is this portfolio. Day 3 is Ki Forge, a local Python/OpenCV/MediaPipe hand-gesture energy particle playground. The calendar day and published project count are separate; future projects are not published automatically.
+- [Community](https://keshavmarkan.com/#folio-leadership): GDG Conestoga Executive Lead and GDG Waterloo Subcommittee Member.
+- [Contact and education](https://keshavmarkan.com/#folio-about): Bachelor of Computer Science, expected 2029. Contact marrkann08@gmail.com.
+
+## Profiles
+
+- [GitHub](https://github.com/marrkann08-max): Software repositories.
+- [LinkedIn](https://www.linkedin.com/in/keshav-kumar-markan-1bb0483a4): Professional profile.
+- [Devpost](https://devpost.com/marrkann08): Project submissions.
+- [Instagram](https://www.instagram.com/kaylocksin/): Public project series.
+
+## Optional
+
+- [Sitemap](https://keshavmarkan.com/sitemap.xml): Canonical public page.
+
+The guestbook is an optional participation feature. Reading this site does not require submitting a mark. This site does not publish an ARD agent catalog or WebMCP tools.

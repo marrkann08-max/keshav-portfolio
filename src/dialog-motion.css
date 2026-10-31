@@ -1,0 +1,8 @@
+html{scrollbar-gutter:stable}
+.case-dialog{overscroll-behavior:contain;scroll-behavior:auto}
+.case-dialog[open]{animation:case-enter 240ms cubic-bezier(.2,.8,.2,1) both}
+.case-dialog[open]::backdrop{animation:case-backdrop-enter 220ms ease-out both;backdrop-filter:none}
+.case-dialog .daily-image{aspect-ratio:880/603;height:auto;background:#101827;object-fit:contain}
+@keyframes case-enter{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes case-backdrop-enter{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.case-dialog[open],.case-dialog[open]::backdrop{animation:none}}

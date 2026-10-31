@@ -1,0 +1,56 @@
+#kb-world #kb-flat .folio-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);grid-template-areas:'top top' 'name portrait' 'bio portrait' 'kinetic kinetic' 'entry entry';column-gap:48px;align-items:start}
+#kb-world #kb-flat .hero-topline{grid-area:top}
+#kb-world #kb-flat h1.folio-name{grid-area:name;font-size:clamp(56px,6.4vw,88px);line-height:.94;letter-spacing:-.045em;margin:30px 0 18px}
+#kb-world #kb-flat .hero-layout{display:contents}
+#kb-world #kb-flat .hero-bio{grid-area:bio;max-width:560px;padding:0 0 28px}
+#kb-world #kb-flat .hero-bio p{max-width:550px;font-size:16px;line-height:1.7}
+#kb-world #kb-flat .hero-links{margin-top:20px}
+#kb-world #kb-flat .hero-portrait{grid-area:portrait;width:100%;max-width:330px;justify-self:end;margin:30px 0 24px}
+#kb-world #kb-flat .hero-portrait img{height:350px;object-position:50% 58%}
+#kb-world #kb-flat .kinetic-strip{grid-area:kinetic;grid-template-columns:110px 1fr;gap:22px;margin-bottom:0}
+#kb-world #kb-flat .kinetic-strip .object-stage{height:115px}
+#kb-world #kb-flat .kinetic-strip .object-caption{display:none}
+#kb-world #kb-flat .profile-links{display:flex;align-items:center;gap:16px 38px;flex-wrap:wrap;padding:12px 0}
+#kb-world #kb-flat .profile-links a{display:inline-flex;align-items:center;min-height:44px;font:12px monospace;text-decoration:none;border-bottom:1px solid #53634f;transition:color 140ms,border-color 140ms}
+#kb-world #kb-flat .profile-links a:hover{color:#ff946a;border-color:#ff946a}
+#kb-world #kb-flat .enter-banner{grid-area:entry}
+
+#kb-world #kb-flat .experience-panel.with-photo{grid-template-columns:250px minmax(0,1fr);grid-template-areas:'heading heading' 'photo copy';gap:16px 38px;min-height:0;max-width:1080px;padding:25px 0 0;align-items:center}
+#kb-world #kb-flat .with-photo .experience-heading{grid-area:heading}
+#kb-world #kb-flat .with-photo h3{font-size:36px;margin:8px 0 0;letter-spacing:-1.2px}
+#kb-world #kb-flat .with-photo .experience-copy{grid-area:copy;align-self:center}
+#kb-world #kb-flat .with-photo .experience-copy h4{margin-top:0}
+#kb-world #kb-flat .with-photo .experience-photo{grid-area:photo;margin:0;width:fit-content;max-width:250px}
+#kb-world #kb-flat .with-photo .experience-photo img{max-width:250px;max-height:280px;width:auto;height:auto}
+#kb-world #kb-flat .with-photo .experience-photo figcaption{font-size:8px;letter-spacing:.6px;max-width:250px}
+
+#kb-world #kb-flat .work-grid article{grid-template-columns:35px minmax(0,1fr) minmax(0,1fr);gap:20px 28px;padding:26px 0;align-items:start}
+#kb-world #kb-flat .work-grid .project-copy{align-self:start}
+#kb-world #kb-flat .work-grid .project-copy h2{font-size:clamp(25px,2.7vw,34px);margin-bottom:12px}
+#kb-world #kb-flat .work-grid .project-copy p{font-size:14px;line-height:1.7;max-width:480px}
+#kb-world #kb-flat .work-grid .project-copy .folio-eyebrow{margin-top:14px}
+#kb-world #kb-flat .work-grid .project-copy button{display:block;margin-top:20px;padding:0 0 7px;border:0;border-bottom:1px solid #61755e;background:none;color:var(--p);font:11px monospace;min-height:32px;text-align:left}
+#kb-world #kb-flat .project-art{grid-row:auto;grid-column:3;min-height:0;height:220px}
+#kb-world #kb-flat .project-art canvas{height:220px}
+#kb-world #kb-flat .project-art.project-photo img{height:220px;min-height:0;max-height:none;object-fit:cover;object-position:50% 46%}
+@media(max-width:900px) and (min-width:651px){#kb-world #kb-flat .folio-hero{column-gap:28px;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr)}#kb-world #kb-flat h1.folio-name{font-size:clamp(50px,7vw,64px)}#kb-world #kb-flat .hero-portrait img{height:340px}}
+@media(max-width:650px){
+ #kb-world #kb-flat .folio-hero{grid-template-columns:1fr;grid-template-areas:'top' 'name' 'bio' 'portrait' 'kinetic' 'entry';gap:0}
+ #kb-world #kb-flat h1.folio-name{font-size:clamp(42px,11vw,58px);margin:24px 0 20px}
+ #kb-world #kb-flat .hero-bio{padding-bottom:20px}
+ #kb-world #kb-flat .hero-bio p{font-size:14px}
+ #kb-world #kb-flat .hero-portrait{justify-self:start;max-width:none;margin:0 0 20px}
+ #kb-world #kb-flat .hero-portrait img{height:310px;object-position:50% 56%}
+ #kb-world #kb-flat .kinetic-strip{grid-template-columns:85px 1fr;gap:14px}
+ #kb-world #kb-flat .kinetic-strip .object-stage{height:90px}
+ #kb-world #kb-flat .profile-links{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px;padding:10px 0}
+ #kb-world #kb-flat .profile-links a{font-size:11px}
+ #kb-world #kb-flat .experience-panel.with-photo{grid-template-columns:1fr;grid-template-areas:'heading' 'copy' 'photo';gap:18px}
+ #kb-world #kb-flat .with-photo h3{font-size:32px}
+ #kb-world #kb-flat .with-photo .experience-photo{max-width:100%}
+ #kb-world #kb-flat .with-photo .experience-photo img{max-width:100%;max-height:300px}
+ #kb-world #kb-flat .work-grid article{grid-template-columns:24px minmax(0,1fr);gap:16px;padding:24px 0}
+ #kb-world #kb-flat .project-art{grid-column:2;height:185px;min-height:0}
+ #kb-world #kb-flat .project-art canvas,#kb-world #kb-flat .project-art.project-photo img{height:185px;min-height:0}
+ #kb-world #kb-flat .work-grid .project-copy button{min-height:44px;margin-top:12px}
+}

@@ -1,0 +1,11 @@
+import * as T from 'three';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+export function createSculpture(host:HTMLElement){
+  const scene=new T.Scene(),camera=new T.PerspectiveCamera(36,1,.1,40);camera.position.set(3,2.5,4.5);
+  const renderer=new T.WebGLRenderer({alpha:true,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.4;host.prepend(renderer.domElement);renderer.domElement.setAttribute('aria-label','Interactive metal sculpture. Drag to rotate.');
+  const controls=new OrbitControls(camera,renderer.domElement);controls.enableZoom=false;controls.enablePan=false;controls.enableDamping=true;
+  scene.add(new T.HemisphereLight('#e0e8d6','#20382c',3));const light=new T.DirectionalLight('#ffd8bd',5);light.position.set(4,5,3);scene.add(light);
+  const group=new T.Group();group.rotation.z=-.35;scene.add(group);group.add(new T.Mesh(new T.TorusKnotGeometry(.85,.22,100,10,2,3),new T.MeshStandardMaterial({color:'#8c9e89',metalness:.75,roughness:.3})));group.add(new T.LineSegments(new T.WireframeGeometry(new T.TorusKnotGeometry(.86,.24,40,6,2,3)),new T.LineBasicMaterial({color:'#c6d8b7',transparent:true,opacity:.32})));group.add(new T.Mesh(new T.OctahedronGeometry(.25),new T.MeshStandardMaterial({color:'#ff784b',emissive:'#ff784b',emissiveIntensity:.5,metalness:.5,roughness:.25})));
+  function resize(){const w=host.clientWidth,h=host.clientHeight;if(w&&h){renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()}}const size=new ResizeObserver(resize);size.observe(host);resize();let visible=true;const intersection=new IntersectionObserver(e=>visible=e[0].isIntersecting,{rootMargin:'100px'});intersection.observe(host);renderer.setAnimationLoop(()=>{if(!visible||document.hidden)return;controls.update();renderer.render(scene,camera)});
+  return ()=>{renderer.setAnimationLoop(null);controls.dispose();size.disconnect();intersection.disconnect();scene.traverse(o=>{if(o instanceof T.Mesh||o instanceof T.LineSegments){o.geometry.dispose();for(const mat of Array.isArray(o.material)?o.material:[o.material])mat.dispose()}});renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove()};
+}

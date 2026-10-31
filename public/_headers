@@ -1,0 +1,2 @@
+/vision/hand-worker.js
+  Content-Security-Policy: connect-src 'self';

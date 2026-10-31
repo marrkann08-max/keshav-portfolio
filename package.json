@@ -1,0 +1,36 @@
+{
+  "name": "keshav-markan-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && tsc -p tsconfig.worker.json --noEmit && tsc -p tsconfig.vision.json --noEmit && node scripts/build-vision.mjs && vite build && node scripts/prerender.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "dev:full": "npm run build && wrangler dev --local --port 8787",
+    "db:local": "wrangler d1 migrations apply portfolio-guestbook --local",
+    "test": "vitest run",
+    "deploy": "npm run build && wrangler deploy",
+    "setup:local": "node scripts/setup-local.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.2.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261029.1",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.170.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "esbuild": "0.28.2",
+    "miniflare": "4.20260730.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5",
+    "wrangler": "4.156.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "keshav-markan-portfolio",
+  "routes": [{ "pattern": "keshavmarkan.com", "custom_domain": true }, { "pattern": "www.keshavmarkan.com", "custom_domain": true }],
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-08-06",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": true, "not_found_handling": "single-page-application" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "portfolio-guestbook", "database_id": "a8894a3d-0672-4b0e-91f6-afd121cd7d06", "migrations_dir": "migrations" }
+  ]
+}
+
+

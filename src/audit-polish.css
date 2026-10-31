@@ -1,0 +1,7 @@
+#kb-world #kb-flat .series-grid button:disabled{cursor:default;color:#7b897a;background:transparent;opacity:.6}
+#kb-world #kb-flat .series-grid button.reached{min-height:44px}
+#kb-world .trail-projects{display:grid;gap:12px;margin-top:20px}
+#kb-world .trail-projects button{display:block;text-align:left;padding:15px;line-height:1.5;background:#20373a;min-height:64px}
+#kb-world .trail-projects button small{display:block;font:9px/1.8 monospace;letter-spacing:1px;color:#b9d2ae;margin-bottom:4px}
+#kb-world .sheet .trail-projects button:hover{border-color:#c7eea7}
+@media(max-width:650px){#kb-world #kb-flat .series-grid button.reached{font-size:13px;font-weight:600}#kb-world .sheet .trail-projects{gap:8px;margin-top:12px}}

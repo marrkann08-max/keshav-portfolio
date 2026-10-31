@@ -1,0 +1,52 @@
+#kb-world figure{margin:0}
+#kb-world figure img{display:block;width:100%;height:auto}
+#kb-world figcaption{font:10px/1.6 monospace;letter-spacing:1px;padding-top:12px;color:#aebba9}
+#kb-world #kb-flat .hero-portrait{position:relative;margin:-30px -10px 0 0;justify-self:end;width:min(100%,480px);isolation:isolate}
+#kb-world #kb-flat .hero-portrait img{height:490px;object-fit:cover;object-position:50% 62%;filter:saturate(.65) contrast(1.06);mask-image:linear-gradient(transparent,#000 16%,#000 62%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 16%,#000 62%,transparent)}
+#kb-world #kb-flat .hero-portrait::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#181e1c,transparent 20%,transparent 80%,#181e1c);pointer-events:none;z-index:1}
+#kb-world #kb-flat .hero-portrait figcaption{position:absolute;left:15%;bottom:32px;font-size:9px;letter-spacing:2px;color:#b1bdab;z-index:2}
+#kb-world #kb-flat .kinetic-strip{display:grid;grid-template-columns:180px 1fr;align-items:center;gap:30px;border-top:1px solid #3b413d;margin-bottom:20px}
+#kb-world #kb-flat .kinetic-strip .object-stage{height:160px}
+#kb-world #kb-flat .kinetic-strip p{font:17px/1.7 monospace;color:#d0dcc7}
+#kb-world #kb-flat .kinetic-strip a{font-size:12px}
+#kb-world #kb-flat .experience-photo{margin-top:28px;max-width:760px}
+#kb-world #kb-flat .experience-photo img{max-height:460px;object-fit:contain;object-position:left;background:#d2d4c8}
+#kb-world #kb-flat .experience-photo figcaption{color:#52614c}
+#kb-world #kb-flat .series-media{display:grid;grid-template-columns:1.6fr 1fr;gap:35px;align-items:center;margin:28px 0}
+#kb-world #kb-flat .series-media img{aspect-ratio:16/9;object-fit:cover}
+#kb-world #kb-flat .series-media>a{font:15px/1.8 monospace;text-decoration:none}
+#kb-world #kb-flat .series-media strong{font-size:24px;font-weight:400;color:#ff946a}
+#kb-world #kb-flat .community-photo{margin-top:24px}
+#kb-world #kb-flat .community-photo img{max-height:390px;object-fit:contain;object-position:left;background:#101714}
+#kb-world header{position:relative;z-index:10}
+#kb-world .scene>canvas{position:absolute;inset:0;touch-action:none}
+#kb-world .status{pointer-events:none}
+#kb-world .mobile-walk{z-index:4;touch-action:none}
+#kb-world .mobile-walk button{touch-action:none;user-select:none;-webkit-user-select:none}
+#kb-world .overlay-bottom{z-index:4}
+#kb-world .sheet{max-height:calc(100% - 235px);overflow:auto;overscroll-behavior:contain}
+#kb-world .load{z-index:3;max-width:85%;width:360px;padding:18px;background:#102028ee;line-height:1.8;text-align:center;pointer-events:none}
+@media(pointer:coarse){#kb-world .mobile-walk{display:grid}#kb-world button,#kb-world .route button{min-height:44px}}
+@media(max-width:650px){
+ #kb-world #kb-flat .hero-portrait{width:100%;margin:8px 0 0}
+ #kb-world #kb-flat .hero-portrait img{height:400px;object-position:50% 56%}
+ #kb-world #kb-flat .hero-portrait figcaption{bottom:24px;left:10%}
+ #kb-world #kb-flat .kinetic-strip{grid-template-columns:115px 1fr;gap:15px}
+ #kb-world #kb-flat .kinetic-strip .object-stage{height:135px}
+ #kb-world #kb-flat .kinetic-strip .object-caption{display:none}
+ #kb-world #kb-flat .kinetic-strip p{font-size:13px}
+ #kb-world #kb-flat .series-media{grid-template-columns:1fr;gap:16px}
+ #kb-world .scene{height:min(780px,calc(100svh - 105px));min-height:520px}
+ #kb-world .intro{top:20px;left:20px;max-width:250px}
+ #kb-world .intro h1{font-size:25px}
+ #kb-world .intro p{display:none}
+ #kb-world .status{top:120px;font-size:8px}
+ #kb-world .status strong{font-size:22px}
+ #kb-world .instructions{display:block;text-align:left;font-size:9px;max-width:260px;line-height:1.7}
+ #kb-world .overlay-bottom{display:flex;flex-direction:column;align-items:start;gap:8px;bottom:12px}
+ #kb-world .mobile-walk{bottom:130px;right:15px}
+ #kb-world .sheet{top:170px;bottom:110px;max-height:none;z-index:6}
+ #kb-world .open-sheet .mobile-walk{display:none}
+ #kb-world .explore-tools button{padding:10px 11px;min-height:44px}
+ #kb-world .hero-links a{min-height:44px;display:flex;align-items:center}
+}
