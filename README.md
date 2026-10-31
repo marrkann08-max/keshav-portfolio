@@ -1,6 +1,8 @@
 # Keshav Markan — React portfolio
 
-The approved portfolio, rebuilt with React and TypeScript, plus a real shared “I was here” guestbook.
+A React and TypeScript portfolio with an explorable 3D campus, local camera hand scrolling, discovery puzzles, and a shared guestbook.
+
+Live: https://keshavmarkan.com
 
 ## Stack
 
@@ -19,7 +21,7 @@ Dependency versions are pinned, with a lockfile for reproducible installation.
 1. Introduction, interactive sculpture, and a prominent 3D campus button.
 2. Work experience: Research Assistant → Deepiri → PAL → OER → CSI.
 3. Featured projects: Software Effort Estimator, ChainBreak Lab, and Naftelia.
-4. The 100-day project series, currently on Day 2.
+4. The 100-day project series, with three published projects: Smart Traffic Navigator, this portfolio, and Ki Forge.
 5. GDG community leadership.
 6. “I was here” guestbook.
 7. Education and contact information.
@@ -92,7 +94,7 @@ The `routes` configuration already connects `keshavmarkan.com` as a custom domai
 - `worker/index.ts`: production API, cookies, deduplication, and throttling.
 - `migrations/0001_guestbook.sql`: D1 schema.
 
-Supplied photos are in `public/images/`: a speaking portrait, Open Learning and CSI work photos, Growth Summit (GDG Conestoga), Build with Gemma and Build with AI (GDG Waterloo), and series media. Instagram links use @kaylocksin. Day 1 includes its supplied image; specific project names and demo links for Days 1–2 are still pending. Project visuals remain labeled schematics until real project screenshots are supplied.
+Supplied photos are in `public/images/`: a speaking portrait, Open Learning and CSI work photos, Growth Summit (GDG Conestoga), Build with Gemma (GDG Waterloo), and series media. Instagram links use @kaylocksin. The published trail includes Day 1 Smart Traffic Navigator, Day 2 this portfolio, and Day 3 Ki Forge with its photo and source link. Research and marine project illustrations are labeled schematics; ChainBreak uses a real hardware photo.
 
 Mobile updates lower the campus graphics load on touch devices, provide movement and Open nearby controls, make destination panels available independently of WebGL, and handle lost graphics contexts. A 390px browser check verified campus rendering, movement controls, destination panels, day dialogs, OER photos, and no horizontal overflow or captured console errors. Actual phone confirmation remains with the owner.
 
@@ -114,7 +116,7 @@ The portrait uses a clean rectangular crop with no filters, edge fades, or shado
 
 The calendar counter advances automatically at midnight in America/Toronto, using October 28, 2026 as Day 1 (October 29 is Day 2). It refreshes on minute boundaries and when the page regains focus. `src/series-calendar.ts` owns the start date/time zone. This counter is separate from published progress: add each real project to `dailyProjects` in `src/content.ts` to publish a day and unlock its tile. Neither Instagram posts nor project content are imported automatically. Four date tests cover midnight, international visitors, daylight saving, and the 1–100 range.
 
-The site serves crawlable initial HTML, canonical metadata, Person/ProfilePage structured data, robots.txt, and a sitemap. Google Search Console verification and indexing requests have not been completed; indexing or ranking is not guaranteed.
+The site serves crawlable initial HTML, canonical metadata, Person/ProfilePage structured data, robots.txt, and a sitemap. Google Search Console ownership is verified, the sitemap is submitted, and homepage indexing has been requested; indexing or ranking is not guaranteed.
 
 Hand scrolling, the discovery passport, and the hidden traffic puzzle are implemented. Supplied portfolio photos are bundled; government documents and permit scans are excluded.
 
